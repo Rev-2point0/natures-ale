@@ -1,0 +1,214 @@
+/* Define color variables */
+:root {
+    --background-color: #eedec3; /* Warm Beige */
+
+    --section-color: #F4F4F4;    /* Light Gray */
+
+    --button-cta-color: #F4C145; /* Goldenrod */
+
+    --text-color: #3E3E3E;       /* Charcoal Gray */
+
+    --header-color: #2C5E31;     /* Forest Green */
+
+    --accent-color: #E8B4B8;     /* Dusty Rose */
+}
+
+
+
+
+/* Global Variables */
+button{
+    cursor: pointer;
+    background-color: var(--button-cta-color);
+    color: var(--text-color);
+    border: 1px solid var(--header-color);
+    padding: 5px 0;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: var(--header-color);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    transition: 0.5s ease;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: var(--background-color);
+    color: var(--text-color);
+    }
+
+
+
+
+/* Custom Formatting */
+    *,              /* Box sizing rules */
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    }
+
+    ul[class],      /* Remove default padding */
+    ol[class] {
+    padding: 0;
+    }
+
+    body,           /* Remove default margin */
+    h1,	
+    h2,
+    h3,
+    h4,
+    p,
+    ul[class],
+    ol[class],
+    li,
+    figure,
+    figcaption,
+    blockquote,
+    dl,
+    dd {
+    margin: 0;
+    }
+
+    ul[class],
+    ol[class] {         /* Remove list styles on ul, ol elements with a class attribute */
+    list-style: none;
+    }
+
+    a:not([class]) {    /* A elements that don't have a class get default styles */
+
+    text-decoration-skip-ink: auto;
+    }
+
+    img {               /* Make images easier to work with */
+    max-width: 100%;
+    display: block;
+    }
+
+    article > * + * {   /* Natural flow and rhythm in articles by default */
+
+    margin-top: 1em;
+    }
+
+    input,              /* Inherit fonts for inputs and buttons */
+    button,
+    textarea,
+    select {
+    font: inherit;
+    }
+
+    @media (prefers-reduced-motion: reduce) {   /* Reduce motion settings */
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    }
+
+
+
+/* Homepage Header Styles */
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+header h1 {
+    color: var(--header-color);
+    font-size: 2.5em;
+    padding: 0 20px;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--header-color);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0px;
+}
+
+nav ul li {
+    padding: 12px 20px 0 20px;
+    line-height: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--header-color);
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    text-decoration: underline var(--header-color) solid 2px;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.loginBtn {
+    cursor: pointer;
+    background-color: var(--header-color);
+    color: var(--accent-color);
+    border: 1px solid var(--text-color); 
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.loginBtn:hover {
+    background-color: var(--button-cta-color);
+    color: var(--header-color);
+    border: 1px solid var(--header-color);
+    transition: 0.5s ease;
+}
+
+
+/* Homepage Content Styles */
+.sectionDescription {
+    margin-right: auto;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.sectionDescription p{
+    text-align: left;
+}
+
+.shopBtn{
+    width: 80%;
+    margin: 10px 0;;
+}
+
+.sectionLinks{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-top: 150px;
+    background-color: var(--section-color);
+    padding: 20px; 
+}
+.sectionLinks .link{
+    text-align: center;
+    padding: 20px;
+}
+
+.link img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;    
+}
